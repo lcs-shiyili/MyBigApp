@@ -60,7 +60,7 @@ struct BookView: View {
                 
                 Text("Review")
                     .font(.headline)
-                Text("A timeless epic with more relevance today than ever")
+                Text("A timeless epic with more relevance today than ever.")
                 Spacer()
                 
                 .navigationTitle("1984")
