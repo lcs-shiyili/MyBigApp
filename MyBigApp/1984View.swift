@@ -16,16 +16,18 @@ struct BookView: View {
                     .foregroundColor(.purple)
                 HStack{
                     Rectangle()
-                        .frame(width: 100, height: 150)
+                        .frame(width: 120, height: 180)
                     
                     VStack(alignment: .leading){
                         Text("Genre")
                             .font(.headline)
                         Text("Science Fiction")
+                            .padding(.bottom)
                         
                         Text("Date Started")
                             .font(.headline)
                         Text("April 3, 2015")
+                            .padding(.bottom)
                         
                         Text("Date Finished")
                             .font(.headline)
@@ -35,18 +37,26 @@ struct BookView: View {
                     .padding()
                     
                 }
+                .padding(.bottom)
                 Text("Star Rating")
                     .font(.headline)
                 
+                    .padding(2)
+                
                 HStack{
                     Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
                     Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
                     Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
                     Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
                     Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
                 }
                 
-                
+                .padding(.bottom)
                 
                 Text("Review")
                     .font(.headline)
@@ -63,12 +73,13 @@ struct BookView: View {
                         
                         Button{
                         }label: {
-                            Text("\(Image(systemName: "chevron.left"))Review")
+                            Text("\(Image(systemName: "chevron.left"))Reviews")
                         }
                     }
                 }
             }
             .padding()
+            .tint(.blue)
         }
     }
 }
