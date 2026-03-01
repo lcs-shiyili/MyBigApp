@@ -10,28 +10,34 @@ import SwiftUI
 struct BookView: View {
     var body: some View {
         NavigationStack{
-            VStack {
+            VStack (alignment: .leading) {
                 Text("by George Orwell")
                     .font(.system(size: 30.0, design: .default))
-                    .tint(.purple)
+                    .foregroundColor(.purple)
                 HStack{
                     Rectangle()
                         .frame(width: 100, height: 150)
-                    VStack{
+                    
+                    VStack(alignment: .leading){
                         Text("Genre")
+                            .font(.headline)
                         Text("Science Fiction")
                         
                         Text("Date Started")
+                            .font(.headline)
                         Text("April 3, 2015")
                         
                         Text("Date Finished")
+                            .font(.headline)
                         Text("April 9, 2025")
                     }
                 
-                    
+                    .padding()
                     
                 }
                 Text("Star Rating")
+                    .font(.headline)
+                
                 HStack{
                     Image(systemName: "star.fill")
                     Image(systemName: "star.fill")
@@ -39,14 +45,25 @@ struct BookView: View {
                     Image(systemName: "star.fill")
                     Image(systemName: "star.fill")
                 }
+                
+                
+                
+                Text("Review")
+                    .font(.headline)
+                Text("A timeless epic with more relevance today than ever")
+                Spacer()
+                
                 .navigationTitle("1984")
+                
+                
+            // Back to Review
                 .toolbar{
                     
                     ToolbarItem(placement: .topBarLeading) {
                         
                         Button{
                         }label: {
-                            Text("\(Image(systemName: "chevron.left"))Pets")
+                            Text("\(Image(systemName: "chevron.left"))Review")
                         }
                     }
                 }
