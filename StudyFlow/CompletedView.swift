@@ -14,5 +14,5 @@ struct CompletedView: View {
 }
 
 #Preview {
-    CompletedView()
+    LandingView()
 }

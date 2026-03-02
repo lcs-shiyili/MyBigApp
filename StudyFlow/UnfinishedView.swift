@@ -9,10 +9,51 @@ import SwiftUI
 
 struct UnfinishedView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack{
+                HStack{
+                    Text("Tasks")
+                    Text("Due date")
+                }
+                
+                HStack{
+                    Text("English essay")
+                    Text("Dec 18, 2025")
+                }
+                
+                HStack{
+                    Text("Investment plan")
+                    Text("Dec 1, 2025")
+                }
+                
+            }
+            .pickerStyle(.wheel)
+            
+            .navigationTitle("Study Flow")
+            .toolbar {
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    
+                    Button{
+                    } label: {
+                        Text((Image(systemName: "chevron.left")))
+                    }
+                    
+                }
+                
+                ToolbarItem(placement: .primaryAction) {
+                    
+                    Button {
+                    } label:{Image(systemName: "plus")}
+                    
+                }
+                
+            }
+            
+        }
     }
 }
 
 #Preview {
-    UnfinishedView()
+    LandingView()
 }

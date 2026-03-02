@@ -14,5 +14,5 @@ struct TestView: View {
 }
 
 #Preview {
-    TestView()
+    LandingView()
 }
