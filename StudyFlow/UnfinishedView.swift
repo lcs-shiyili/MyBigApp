@@ -11,25 +11,37 @@ struct UnfinishedView: View {
     var body: some View {
         NavigationStack{
             VStack{
+               
+                
                 HStack{
                     Text("Tasks")
+                    
                     Text("Due date")
                 }
+                .background(Color.gray)
                 
-                HStack{
-                    Text("English essay")
-                    Text("Dec 18, 2025")
+                
+                
+                .padding()
+                
+                VStack(alignment: .leading){
+                    HStack{
+                        Text("English essay")
+                        Text("Dec 18, 2025")
+                    }
+                    
+                    HStack{
+                        Text("Investment plan")
+                        Text("Dec 1, 2025")
+                    }
                 }
                 
-                HStack{
-                    Text("Investment plan")
-                    Text("Dec 1, 2025")
-                }
-                
+                Spacer()
             }
             .pickerStyle(.wheel)
             
             .navigationTitle("Study Flow")
+            
             .toolbar {
                 
                 ToolbarItem(placement: .topBarLeading) {
