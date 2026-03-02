@@ -5,6 +5,7 @@
 //  Created by Shiyi Li on 2026-03-02.
 //
 
+
 import SwiftUI
 
 struct UnfinishedView: View {
@@ -12,11 +13,11 @@ struct UnfinishedView: View {
         NavigationStack{
             VStack{
                
-                
-                HStack{
+                HStack(alignment: .center){
                     Text("Tasks")
-                    
+                        .font(.headline)
                     Text("Due date")
+                        .font(.headline)
                 }
                 .background(Color.gray)
                 
@@ -30,6 +31,8 @@ struct UnfinishedView: View {
                         Text("Dec 18, 2025")
                     }
                     
+                    .padding(2)
+                    
                     HStack{
                         Text("Investment plan")
                         Text("Dec 1, 2025")
@@ -38,7 +41,7 @@ struct UnfinishedView: View {
                 
                 Spacer()
             }
-            .pickerStyle(.wheel)
+          
             
             .navigationTitle("Study Flow")
             
