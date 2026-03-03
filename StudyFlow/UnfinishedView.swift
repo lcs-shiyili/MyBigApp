@@ -36,17 +36,27 @@ struct UnfinishedView: View {
                 .padding()
                 
                 VStack(spacing: 18){
-                    HStack{
+                    HStack {
+                        Image(systemName: "square")
+                            .font(.title3)
+
                         Text("English essay")
+
                         Spacer()
+
                         Text("Dec 18, 2025")
                     }
                     
                     .padding(2)
                     
-                    HStack{
+                    HStack {
+                        Image(systemName: "square")
+                            .font(.title3)
+
                         Text("Investment plan")
+
                         Spacer()
+
                         Text("Dec 1, 2025")
                     }
                 }
